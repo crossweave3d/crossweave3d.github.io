@@ -1,0 +1,573 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.publication-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1rem;
+}
+
+
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.teaser video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+.publication-title {
+}
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+.publication-header .hero-body {
+}
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+    text-wrap: balance;
+}
+
+:root {
+  --accent: #3451b2;
+}
+
+.publication-title .title-name {
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.publication-title .title-sub {
+    font-weight: 400;
+}
+
+.title.is-1.publication-title {
+    font-size: 1.875rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+/* Fit the long title on two lines in the 960px desktop container. */
+@media screen and (min-width: 1024px) {
+  .title.is-1.publication-title {
+    font-size: 2.25rem;
+  }
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+    text-wrap: balance;
+    line-height: 1.6;
+}
+
+.publication-authors sup,
+.publication-affiliations sup {
+    font-size: 0.65em;
+    margin-left: 0.1em;
+    line-height: 0;
+}
+
+.publication-affiliations sup {
+    margin: 0 0.15em 0 0;
+}
+
+.publication-affiliations {
+    font-family: 'Google Sans', sans-serif;
+    font-size: 1rem;
+    color: #6b6b6b;
+    margin-top: 0.5rem;
+}
+
+.publication-affiliations .author-block + .author-block {
+    margin-left: 1.25rem;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-venue-line {
+    font-family: 'Google Sans', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: #363636;
+    margin: 0 0 1.5rem;
+}
+
+.publication-venue-line strong {
+    color: #363636;
+    font-weight: 700;
+}
+
+.publication-venue-line .publication-venue {
+    display: inline;
+    color: #363636;
+}
+
+.publication-venue-full {
+    color: #7a7a7a;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+}
+
+.publication-authors a {
+   color: var(--accent) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.affiliation-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem 2.5rem;
+  margin: 1.75rem 0 0.75rem;
+}
+
+/* Heights are tuned per logo so they read at a similar visual weight. */
+.affiliation-logos img {
+  --logo-h: 64px;
+  height: var(--logo-h);
+  width: auto;
+  max-width: 280px;
+  object-fit: contain;
+}
+
+.affiliation-logos .logo-iiit   { --logo-h: 80px; }
+.affiliation-logos .logo-rrc    { --logo-h: 56px; }
+.affiliation-logos .logo-heidelberg { --logo-h: 64px; }
+.affiliation-logos .logo-mbzuai { --logo-h: 56px; }
+.affiliation-logos .logo-iitb   { --logo-h: 72px; }
+
+@media screen and (max-width: 768px) {
+  .affiliation-logos img {
+    height: calc(var(--logo-h) * 0.7);
+  }
+}
+
+.publication-banner img {
+}
+
+.publication-authors {
+  /*color: #4286f4;*/
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+.venue-track {
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.link-block .neurips-icon {
+    width: 1.1em;
+    height: 1.1em;
+}
+
+@media screen and (max-width: 768px) {
+  .publication-venue-line {
+    font-size: 1.05rem;
+  }
+}
+
+/* Small hover/focus tooltip for not-yet-available links. */
+.link-block.has-tooltip {
+    position: relative;
+}
+
+.link-block.has-tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translate(-50%, 4px);
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    background: #363636;
+    color: #fff;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s, transform 0.15s;
+}
+
+.link-block.has-tooltip:hover::after,
+.link-block.has-tooltip:focus-within::after {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+/* Results tables. */
+#results h3.title {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.results-legend {
+    font-size: 0.9rem;
+    color: #6b6b6b;
+    margin-top: 0.5rem;
+}
+
+.table-container {
+    margin-bottom: 0.5rem;
+}
+
+.results-table {
+    margin: 0 auto;
+    font-size: 0.9rem;
+}
+
+.results-table th,
+.results-table td {
+    text-align: center !important;
+    vertical-align: middle !important;
+    white-space: nowrap;
+}
+
+.results-table tbody td:first-child {
+    text-align: left !important;
+}
+
+.results-table tr.is-ours {
+    background-color: #eef1fb;
+}
+
+.results-table tr.is-ours td:first-child {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+
+.ablation-table tbody td:first-child {
+    text-align: center !important;
+}
+
+.ablation-table tr.is-ours td:first-child {
+    color: inherit;
+    font-weight: inherit;
+}
+
+.ablation-table tr.is-ours td:nth-child(3) {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* Qualitative retrieval plates. */
+.qualitative-figure {
+    margin: 0 0 2.5rem;
+}
+
+.qualitative-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #ededed;
+}
+
+.qualitative-figure figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: #4a4a4a;
+    text-align: justify;
+}
+
+/* Method overview figure and text. */
+.method-figure {
+    margin: 0;
+}
+
+.method-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.method-figure figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: #4a4a4a;
+    text-align: justify;
+}
+
+.method-text h4 {
+    font-family: 'Google Sans', sans-serif;
+    margin-top: 1.5rem;
+}
+
+.method-text .equation {
+    white-space: nowrap;
+}
+
+.results-text {
+    max-width: 48rem;
+    margin: 0 auto 1rem;
+    text-align: left;
+}
+
+/* Contents sidebar, shown only where there is room beside the content. */
+html {
+    scroll-behavior: smooth;
+}
+
+section[id],
+h3[id] {
+    scroll-margin-top: 1.5rem;
+}
+
+.page-toc {
+    display: none;
+}
+
+@media screen and (min-width: 1300px) {
+  .page-toc {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 1.5rem;
+    transform: translateY(-50%);
+    width: 11rem;
+    font-family: 'Google Sans', sans-serif;
+    font-size: 0.9rem;
+    z-index: 10;
+  }
+}
+
+.page-toc-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.75rem;
+    color: #7a7a7a;
+    margin-bottom: 0.5rem;
+}
+
+.page-toc ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 2px solid #ededed;
+}
+
+.page-toc ul ul {
+    border-left: none;
+    font-size: 0.85rem;
+}
+
+.page-toc a {
+    display: block;
+    padding: 0.2rem 0 0.2rem 0.75rem;
+    margin-left: -2px;
+    border-left: 2px solid transparent;
+    color: #6b6b6b;
+}
+
+.page-toc ul ul a {
+    padding-left: 1.5rem;
+}
+
+.page-toc a:hover {
+    color: #363636;
+}
+
+.page-toc a.is-active {
+    color: var(--accent);
+    border-left-color: var(--accent);
+    font-weight: 500;
+}
+
+/* Query-views line chart. */
+:root {
+  --series-1: #2a78d6;
+  --series-2: #eb6834;
+}
+
+.views-chart {
+    max-width: 40rem;
+    margin: 0 auto 1rem;
+}
+
+.views-chart-legend {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    font-size: 0.85rem;
+    color: #4a4a4a;
+    margin-bottom: 0.25rem;
+}
+
+.views-chart-legend i,
+.views-chart-tooltip i {
+    display: inline-block;
+    width: 14px;
+    height: 3px;
+    border-radius: 2px;
+    margin-right: 0.4rem;
+    vertical-align: middle;
+}
+
+.views-chart-plot {
+    position: relative;
+}
+
+.views-chart svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+.views-chart .grid {
+    stroke: #ededed;
+    stroke-width: 1;
+}
+
+.views-chart .tick {
+    font-size: 12px;
+    fill: #7a7a7a;
+}
+
+.views-chart .axis-label {
+    font-size: 12px;
+    fill: #4a4a4a;
+}
+
+.views-chart .line {
+    fill: none;
+    stroke-width: 2;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+.views-chart .dot {
+    stroke: #fff;
+    stroke-width: 2;
+}
+
+.views-chart .end-label {
+    font-size: 12px;
+    fill: #363636;
+}
+
+.views-chart .crosshair {
+    stroke: #b5b5b5;
+    stroke-width: 1;
+}
+
+.views-chart .hit {
+    fill: transparent;
+    cursor: crosshair;
+}
+
+.views-chart-tooltip {
+    position: absolute;
+    pointer-events: none;
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+    text-align: left;
+    color: #363636;
+    white-space: nowrap;
+}
+
+.views-chart-tooltip span {
+    margin-left: 0.75rem;
+    float: right;
+    font-variant-numeric: tabular-nums;
+}
+
+.results-table a,
+.results-text a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: #b5b5b5;
+    text-underline-offset: 2px;
+}
+
+.results-table a:hover,
+.results-text a:hover {
+    color: var(--accent);
+    text-decoration-color: currentColor;
+}
+
+/* Inline SVG icons in the link buttons (same metrics as Font Awesome's svg-inline--fa). */
+.svg-icon {
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+    fill: currentColor;
+}
+
+/* Qualitative figures sit directly under their results tables. */
+.table-container + .qualitative-figure {
+    margin-top: 1.5rem;
+}
