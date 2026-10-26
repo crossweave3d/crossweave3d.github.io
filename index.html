@@ -164,7 +164,7 @@
               a set of sparse 2D-3D correspondences, without scene- or instance-level contrastive objectives, is
               sufficient to train a single model for both scene- and instance-level retrieval. Specifically, we propose
               <b>CrossWeave</b>, a novel framework for cross-modal retrieval that learns sparse patch-point alignment,
-              which alone outperforms global encoding methods. An optimal transport-based aggregator over the aligned
+              which alone outperforms existing methods. An optimal transport-based aggregator over the aligned
               features gives further gains by clustering structurally redundant regions, freeing descriptor capacity
               for semantically distinct local features. CrossWeave achieves state-of-the-art performance on both scene-
               and instance-level retrieval on ScanNet and 3RScan with a <i>single model</i>, whereas existing methods
@@ -445,7 +445,7 @@
           <p class="results-legend">Ablation tables mark only the best result in bold. Agg.: aggregation used during
             training (mean pooling or SALAD). L<sub>i2pc</sub>:
             image-point-cloud aggregation loss; L<sub>p2p</sub>: local patch-point alignment loss. Feats: SALAD
-            (aggregated), LOCAL (mean-pooled patch-/point-level), or HYBRID (SALAD for scene, LOCAL for instance).
+            (aggregated), LOCAL (mean-pooled patch and point features), or HYBRID (SALAD for scene, LOCAL for instance).
             The feature ablation uses CrossWeave trained with both losses.</p>
         </div>
       </div>
