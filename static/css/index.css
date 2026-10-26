@@ -571,3 +571,21 @@ h3[id] {
 .table-container + .qualitative-figure {
     margin-top: 1.5rem;
 }
+
+/* Two-line TL;DR under the teaser video. */
+.tldr {
+    margin: 1.25rem auto 0;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.tldr p + p {
+    margin-top: 0.35rem;
+}
+
+.tldr-label {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--accent);
+}
