@@ -148,7 +148,8 @@ body {
 .publication-authors {
 }
 
-.publication-authors a {
+.publication-authors a,
+.publication-authors .author-name {
    color: var(--accent) !important;
 }
 
